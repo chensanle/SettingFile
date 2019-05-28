@@ -1,5 +1,5 @@
 """"""""""""""""""""""""
-"Base config by:fythons "
+"Base config by:left "
 """""""""""""""""""""""
 highlight Normal ctermfg=grey ctermbg=black
 set nocompatible
