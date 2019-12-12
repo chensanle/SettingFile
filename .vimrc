@@ -1,14 +1,12 @@
 """"""""""""""""""""""""
 "Base config by:left "
 """""""""""""""""""""""
-highlight Normal ctermfg=grey ctermbg=black
 set nocompatible
 syntax on "语法高亮
 filetype on
 set number "设置行号
 set wildmenu "命令行模式tab键自动补齐
 set history=1000 "历史命令个数
-set background=dark "设置背景色
 set autoindent "自动对齐
 "set smartindent "开启新行时智能缩进
 set magic "设置魔法
