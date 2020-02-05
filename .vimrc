@@ -7,17 +7,15 @@ Plug 'itchyny/lightline.vim'
 
 " go main plug
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " 配色方案
-" colorscheme neodark
 Plug 'KeitaNakamura/neodark.vim'
-" colorscheme monokai
-Plug 'crusoexia/vim-monokai'
-" colorscheme example
 Plug 'acarapetis/vim-colors-github'
 Plug 'rakr/vim-one'
 Plug 'arzg/vim-corvine'
+Plug 'lifepillar/vim-solarized8' " 浅色好看 termguicolors
+Plug 'altercation/vim-colors-solarized'
 
 " vim 状态栏插件
 Plug 'vim-airline/vim-airline'
@@ -36,19 +34,14 @@ call plug#end()
 "==============================================================================
 syntax on
 set t_Co=256
-" 开启24bit的颜色，开启这个颜色会更漂亮一些
-" set termguicolors
-" 配色方案, 可以从上面插件安装中的选择一个使用
-colorscheme one " 主题
-" colorscheme github
-" set background=light " 主题背景 dark-深色; light-浅色
+" set termguicolors | dark | light
 if $TERM =~ "xterm"
-	set background=dark
+    colorscheme neodark
+    set background=dark
 else
-	set background=light
+    set termguicolors
+    set background=light
 endif
-" colorscheme github
-
 "==============================================================================
 " NERDTree 插件
 "==============================================================================
@@ -67,7 +60,6 @@ let NERDTreeShowHidden=0
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 打开 vim 文件及显示书签列表
 let NERDTreeShowBookmarks=2
-
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 
@@ -102,6 +94,7 @@ set history=1000 "历史命令个数
 set autoindent "自动对齐
 "set smartindent "开启新行时智能缩进
 set tabstop=4 "设置tab键长度为４
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 set showmatch "插入括号时短暂的跳转到匹配的对应括号
@@ -117,4 +110,7 @@ set backspace=2
 """"""""""""""""""""""""
 " gocode
 """"""""""""""""""""""""
+" 默认开启 ctrl + x/d
+" 自动开启需要设置
+
 filetype plugin on
