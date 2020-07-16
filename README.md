@@ -1,5 +1,26 @@
 SettingFile
 ====
+### vim 源码安装
+1. 下载
+git clone https://github.com/vim/vim.git
+cd vim
+
+2. 编译配置
+
+./configure --with-features=huge \ 
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7/usr/lib/python2.7/config-x86_64-linux-gnu \
+            --enable-python3interp \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-gui=gtk2 \
+            --enable-cscope \
+            --prefix=/home/some-people/.local/share/vim-awesome
+            
+make install
+
 ### vimrc 配置文件
 
 #### 主要过程
