@@ -24,10 +24,10 @@ make install
 ### vimrc 配置文件
 
 #### 主要过程
-1. 安装 plugn 插件
+1. 安装 plugin 插件
 http://vra.github.io/2019/03/12/vim-plug-intro/
 2. 下载插件
-开Vim,在命令模式下输入:PlugInstall即可安装配置文件中设
+开Vim,在命令模式下输入:PlugInstall即可安装配置文件中设有的所有插件
 
 #### 插件介绍
 1. [gocode](https://github.com/mdempsky/gocode)
