@@ -1,6 +1,8 @@
 SettingFile
 ====
 ### ZSH 配置安装
+
+#### 源码安装
 一般系统默认安装了 zsh，只需 oh-my-zsh 安装即可。下列方式任选其一即可。
 ```
 4.安装on my zsh
@@ -9,6 +11,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # wget 方式
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
+#### 主题配置
+1.c查看oh my zsh主题
+```bash
+ls ~/.oh-my-zsh/themes
+```
+2. 执行修改
+打开配置文件，并修改内容：`ZSH_THEME = "some-thene"`
+```bash
+vim ~/.zshrc
+```
+
+值得一提的是，可以修改成 random，随机体验各式皮肤。
 
 ### vim8 源码安装
 #### 下载并进入相关目录
